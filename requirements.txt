@@ -1,7 +1,10 @@
-streamlit>=1.20
-ultralytics==8.3.137      
-torch>=2.0.0
-torchvision>=0.15.0
-pillow
-numpy
-opencv-python-headless
+# CPU wheels only (small, compatible)
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+streamlit==1.35.0
+ultralytics==8.3.137
+opencv-python-headless==4.10.0.84
+torch==2.2.2
+torchvision==0.17.2
+numpy>=1.24,<2.0
+pillow>=9.5
