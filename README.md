@@ -27,6 +27,10 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+### Streamlit Cloud runtime note
+
+This repository pins Streamlit Cloud to Python `3.11` via `runtime.txt` (`python-3.11`) to match the pinned `torch`/`torchvision`/OpenCV wheels used by Ultralytics YOLO.
+
 ## 🧠 Model & Data
 	•	Architecture: YOLOv8-nano (pretrained on COCO, finetuned for one class: left_eye)
 	•	Training set: ~1,400 manually-annotated images
@@ -49,4 +53,3 @@ results = model.predict(source=img_array, conf=0.25)
 ```
 3.	First detected bounding box is extracted: (x1, y1, x2, y2).
 4.	Center computed as ((x1+x2)/2, (y1+y2)/2) and drawn on the image.
-
